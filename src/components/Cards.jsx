@@ -4,10 +4,29 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 
-function Cards({ele}) {
+function Cards({ele,i,task,setTask}) {
+  //find index of tasks
+  const findIndex = (id) =>{
+    for(let i=0; i< task.length; i++){
+      if(id === task[i].id)
+        return i;
+    }
+  }
+
+  //handling delete button
+  const handleDelete = (id) => {
+    let index = findIndex(id);
+    // console.log(index);
+    let newArrayTask = [...task]    //using deep copy
+    newArrayTask.splice(index,1)    //modifying the array
+    setTask(newArrayTask)
+    // console.log(newArrayTask);
+  }
+
     return <>
         <Card className='mb-5 me-4' style={{ width: '19rem'}} >
           <Card.Body>
+            <Card.Title>Id : {i+1}</Card.Title>
             <Card.Title>Name : {ele.title}</Card.Title>
             <Card.Text>Description : {ele.description}</Card.Text>
             <Card.Text>
@@ -17,8 +36,8 @@ function Cards({ele}) {
             </Form.Select>
             </Card.Text>
             <Row>
-              <Col><Button variant="secondary">Edit</Button></Col>
-              <Col><Button variant="danger">Delete</Button></Col>
+              <Col><Button variant="secondary" onClick={()=>{}}>Edit</Button></Col>
+              <Col><Button variant="danger" onClick={()=>handleDelete(ele.id)}>Delete</Button></Col>
             </Row>
 
           </Card.Body>

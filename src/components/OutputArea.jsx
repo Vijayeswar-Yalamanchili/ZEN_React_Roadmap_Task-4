@@ -1,8 +1,5 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form';
-import { Col, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Cards from './Cards';
 
 function OutputArea({task,setTask}) {
@@ -22,7 +19,7 @@ function OutputArea({task,setTask}) {
     </div>
     <div className="row">{
         task.map((e,i)=>{
-            return <Cards ele={e} key={i}/>
+            return <Cards ele={e} i={i} key={i} task={task} setTask={setTask}/>
         })
     }
     </div>
