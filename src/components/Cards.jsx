@@ -23,6 +23,11 @@ function Cards({ele,i,task,setTask}) {
     // console.log(newArrayTask);
   }
 
+  //handling Edit btn
+  const handleEdit = () => {
+    let index = findIndex(id);
+  }
+
     return <>
         <Card className='mb-5 me-4' style={{ width: '19rem'}} >
           <Card.Body>
@@ -36,7 +41,7 @@ function Cards({ele,i,task,setTask}) {
             </Form.Select>
             </Card.Text>
             <Row>
-              <Col><Button variant="secondary" onClick={()=>{}}>Edit</Button></Col>
+              <Col><Button variant="secondary" onClick={()=>{handleEdit()}}>Edit</Button></Col>
               <Col><Button variant="danger" onClick={()=>handleDelete(ele.id)}>Delete</Button></Col>
             </Row>
 

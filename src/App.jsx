@@ -15,16 +15,6 @@ const [task, setTask] = useState([
     id : 2,
     title : "task 2",
     description : "Project 2"
-  },
-  {
-    id : 3,
-    title : "task 3",
-    description : "Project 3"
-  },
-  {
-    id : 4,
-    title : "task 4",
-    description : "Project 4"
   }
 ])
 
