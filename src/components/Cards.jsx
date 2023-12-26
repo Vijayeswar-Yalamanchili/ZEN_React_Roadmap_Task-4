@@ -4,12 +4,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 
-function Cards({data}) {
+function Cards({ele}) {
     return <>
-        <Card className='mb-5 mb-lg-0 me-5' style={{ width: '20rem'}}>
+        <Card className='mb-5 me-4' style={{ width: '19rem'}} >
           <Card.Body>
-            <Card.Title>Name : {data.title}</Card.Title>
-            <Card.Text>Description : {data.description}</Card.Text>
+            <Card.Title>Name : {ele.title}</Card.Title>
+            <Card.Text>Description : {ele.description}</Card.Text>
             <Card.Text>
                 Status : <Form.Select aria-label="Default select example">
               <option value="Completed">Completed</option>
