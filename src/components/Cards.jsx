@@ -12,8 +12,8 @@ function Cards({data}) {
             <Card.Text>Description : {data.description}</Card.Text>
             <Card.Text>
                 Status : <Form.Select aria-label="Default select example">
-              <option value="Completed" variant="success">Completed</option>
-              <option value="Not-Completed" variant="danger">Not-Completed</option>
+              <option value="Completed">Completed</option>
+              <option value="Not-Completed">Not-Completed</option>
             </Form.Select>
             </Card.Text>
             <Row>
