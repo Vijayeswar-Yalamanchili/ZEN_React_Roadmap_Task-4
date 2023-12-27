@@ -8,14 +8,14 @@ function InputArea({task,setTask}) {
 
     const handleCreate = () => {
         let id = task.length? task[task.length -1].id + 1: 1 ;     //using task.length,fetching the last index of tasks if its true orelse it will assign id as 1 for false
-        let newArray = [...task]
+        let newArray = [...task];
         newArray.push({
             id,
-            title : task.title,
-            description : task.description
+            taskName,
+            taskText
         })
-        setTask(newArray);
-        console.log(newArray);
+        setTask(newArray)
+        // console.log(newArray);
     }
 
     return <>
@@ -23,11 +23,11 @@ function InputArea({task,setTask}) {
         <Form className='my-5'>
             <Form.Group className="mb-3">
                 <Form.Label>Todo</Form.Label>
-                <Form.Control type="text" placeholder="Todo Name" onChange={(ele)=>setTaskName(ele.target.value)}/>
+                <Form.Control type="text" placeholder="Todo Name" onChange={(ele)=>{setTaskName(ele.target.value)}}/>
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" rows={3} placeholder='Todo Description' onChange={(ele)=>setTaskText(ele.target.value)}/>
+                <Form.Control as="textarea" rows={3} placeholder='Todo Description' onChange={(ele)=>{setTaskText(ele.target.value)}}/>
             </Form.Group>
             <Button variant='primary' onClick={()=>handleCreate()}>Add Todo</Button>
         </Form>
