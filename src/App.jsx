@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
-import Cards from './components/Cards'
 import InputArea from './components/InputArea'
 import OutputArea from './components/OutputArea'
-import EditArea from './components/EditArea'
 
 
 function App() {
@@ -27,8 +25,6 @@ const [task, setTask] = useState([
         <InputArea task={task} setTask={setTask}/>
         <hr />        
         <OutputArea task={task} setTask={setTask}/>
-        <hr />        
-        <EditArea task={task} setTask={setTask}/>
       </div>
     </div>
   </>

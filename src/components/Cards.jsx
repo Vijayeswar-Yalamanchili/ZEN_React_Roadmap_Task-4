@@ -25,7 +25,7 @@ function Cards({ele,i,task,setTask}) {
 
   //handling Edit btn
   const handleEdit = () => {
-    let index = findIndex(id);
+    alert("Edit button clicked");
   }
 
     return <>
