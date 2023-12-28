@@ -36,8 +36,8 @@ function Cards({ele,i,task,setTask}) {
             <Card.Text>Description : {ele.description}</Card.Text>
             <Card.Text>
                 Status : <Form.Select aria-label="Default select example">
-              <option value="Completed">Completed</option>
               <option value="Not-Completed">Not-Completed</option>
+              <option value="Completed">Completed</option>
             </Form.Select>
             </Card.Text>
             <Row>
