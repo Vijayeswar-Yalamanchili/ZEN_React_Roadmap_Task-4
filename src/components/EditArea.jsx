@@ -29,7 +29,7 @@ function EditArea() {
                 <Form.Label>Description</Form.Label>
                 <Form.Control as="textarea" rows={3} placeholder='Todo Description' onChange={(ele)=>{setTaskText(ele.target.value)}}/>
             </Form.Group>
-            <Button variant='primary' onClick={()=>handleCreate()}>Add Todo</Button>
+            <Button variant='primary' onClick={()=>handleCreate()}>Save changes</Button>
         </Form>
     </>
 }

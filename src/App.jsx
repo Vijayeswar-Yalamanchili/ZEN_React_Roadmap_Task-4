@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Cards from './components/Cards'
 import InputArea from './components/InputArea'
 import OutputArea from './components/OutputArea'
+import EditArea from './components/EditArea'
 
 
 function App() {
@@ -9,12 +10,14 @@ const [task, setTask] = useState([
   {
     id : 1,
     title : "task 1",
-    description : "Project 1"
+    description : "Project 1",
+    status : false,
   },
   {
     id : 2,
     title : "task 2",
-    description : "Project 2"
+    description : "Project 2",
+    status : false,
   }
 ])
 
@@ -24,6 +27,8 @@ const [task, setTask] = useState([
         <InputArea task={task} setTask={setTask}/>
         <hr />        
         <OutputArea task={task} setTask={setTask}/>
+        <hr />        
+        <EditArea task={task} setTask={setTask}/>
       </div>
     </div>
   </>

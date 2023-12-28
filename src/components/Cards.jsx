@@ -31,14 +31,18 @@ function Cards({ele,i,task,setTask}) {
     return <>
         <Card className='mb-5 me-4' style={{ width: '19rem'}} >
           <Card.Body>
-            <Card.Title>Id : {i+1}</Card.Title>
-            <Card.Title>Name : {ele.title}</Card.Title>
+            <Card.Text>Id : {i+1}</Card.Text>
+            <Card.Text>Name : {ele.title}</Card.Text>
             <Card.Text>Description : {ele.description}</Card.Text>
             <Card.Text>
-                Status : <Form.Select aria-label="Default select example">
-              <option value="Not-Completed">Not-Completed</option>
-              <option value="Completed">Completed</option>
-            </Form.Select>
+              <Row>
+                <div className='py-2 ' style={{width:"80px"}}>Status :</div>
+                &nbsp;
+                <Form.Select aria-label="Default select example" style={{width:"65%"}}>
+                  <option value="Not-Completed">Not-Completed</option>
+                  <option value="Completed">Completed</option>
+                </Form.Select>
+                </Row>
             </Card.Text>
             <Row>
               <Col><Button variant="secondary" onClick={()=>{handleEdit()}}>Edit</Button></Col>
